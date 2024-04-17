@@ -1,0 +1,9 @@
+<h2>Cesta productos</h2>
+@for (producto of cesta; track $index) {
+
+    <ul>
+        <li>{{producto}}</li>
+    </ul>
+}
+
+<app-lista-productos (emitter)="addProducto($event)"></app-lista-productos>

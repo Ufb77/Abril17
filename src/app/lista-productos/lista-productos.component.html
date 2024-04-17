@@ -1,0 +1,7 @@
+<h2>Lista productos</h2>
+@for (producto of productos; track producto; let i = $index) {
+    <div style="margin-left: 20px;" (click)="addProductoCesta(producto)">
+        {{i+1}}.{{producto}}
+    </div>
+
+}
