@@ -11,12 +11,12 @@ import { CestaCompraComponent } from '../cesta-compra/cesta-compra.component';
 export class ListaProductosComponent {
 
   @Output()
-  emitter = EventEmitter<string> = new EventEmitter();
+  envio: EventEmitter<string> = new EventEmitter;
   productos:string[] = ["leche", "pan", "cafe", "azucar", "huevos", "plátanos"];
 
 
   addProductoCesta(producto:string){
-    this.emitter.emit(producto)
+    this.envio.emit(producto)
   }
 
 }

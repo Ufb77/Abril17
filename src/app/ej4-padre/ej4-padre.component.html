@@ -1,0 +1,18 @@
+<h3>Lista de personas</h3>
+
+@for (persona of personasMostrar; track $index) {
+    <ul>
+        <li>
+            {{persona.nombre}}, 
+            {{persona.edad}}
+        </li>
+    </ul>
+}
+<app-ej4-hijo (personaEnviar)="agregarPersona($event)"></app-ej4-hijo>
+<button (click)="eliminarUltimoNombre()">Eliminar el último nombre</button>
+<br>
+<button (click)="recorrerLista()">Recorrer array</button>
+<br>
+<button (click)="filtrarEdades">Filtrar Edades</button>
+<br>
+<button (click)="dobleEdad()">Calcular el doble</button>
